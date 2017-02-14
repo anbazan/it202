@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NYT Article Search</title>
+        <style>
+            p, h1 {font-family: helvetica;}
+            p {font-size:1.5em;line-height:1.5em; margin-left: 24px;}
+            pre {font-size: 2em;}
+            
+            div {
+                background-color:lightgray; 
+                border: 1px solid black; 
+                border-radius: 6px;
+                min-height:75px;
+                padding:15px;
+            }
+
+        </style>
+    </head>
+    
+    
+    
+    
+    <body>
+        
+    <h1>NYT Article Search</h1>
+    
+    <!-- div for instructions and form -->
+    <div id="form">
+        <p>
+            Enter a search term for the NYT article archive
+            <br>
+           </p>
+        <input id="txtQuery" type="text" placeholder="Search Query"></input>
+        <button type="button" id="btnSearch" >Find an Article!</button>
+    </div>
+    
+    
+    <!-- a div to store the results -->
+    <div id="results">
+        
+        
+        
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    /*global $*/
+    
+    var nytData;
+    
+    $(function() {
+        
+        
+        var baseUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        
+        var url = baseUrl + "?api-key=" + "7b42509090cd4a1ca81cd5244abe37f2";
+    
+        
+    console.log(url);
+    
+            $("#btnSearch").on("click", function(){
+                $("#results").html("")
+                
+                var searchTerm = $("#txtQuery").val();
+                
+                var searchUrl = url = url + "&q=" + searchTerm;
+                    
+                    
+            $.getJSON( url )
+                .done(function (data) {
+                
+                        $.each(data.response.docs, function (index,value){
+                            
+                            
+                            var html = "<h2>" 
+                            + (value.headline.print_headline || value.headline.main || "No Headline Found")
+                            + "<br>"
+                            + value.pub_date
+                            + "<br>"
+                            + value.byline 
+                            + "<br>"
+                            + (value.lead_paragraph || value.caption || "No lead paragraph")
+                            + "</h2>";
+                        
+                            
+                            console.log(html)
+                            
+                            $("#results").append(html);
+        
+                        })
+                    })
+            });
+                
+                
+                
+    });
+    
+    
+     </script> 
+    </body>
+</html>
