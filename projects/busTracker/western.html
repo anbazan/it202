@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Lane BusTracker </title>
+      <link rel="stylesheet" type="text/css" href="index.css">
+
+    </head>
+ 
+    
+    
+    <body>
+        
+         <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="addison.html">Addison</a></li>
+  <li><a href="western.html">Western</a></li>
+ </ul>
+        
+        <div id= "western" style="padding:20px;background-color:light-grey;height:1500px;"></div>
+   
+  
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script>
+    /* global $ */
+    
+    $(function() {
+         
+          var apiPassThruUrl = "https://polar-garden-75406.herokuapp.com/apiPassThru.php";
+          
+          var apiEndpoint = "http://ctabustracker.com/bustime/api/v2/getpredictions";
+          
+          
+          $.ajax({
+              url: apiPassThruUrl,
+              dataType: "json",
+              method: 'GET',
+              data: {"apiEndpoint": apiEndpoint,
+                      "key":"Dva4qBcNWpD3UjgLQWauLu7Ng",
+                      "format" : "json",
+                      "rt" : "49,X49",
+                      "stpid" : "8417,8195",
+            
+                      
+                  
+              }
+            }).done (function (data) {
+              console.log(data);
+              $("#western").append("<h1> Western Bus Routes</h1>" + "<table>");
+            
+              $.each(data["bustime-response"]["prd"], function(i,v) {
+                  $("#western").append("<tr>" 
+                  +"<td>" + v.rt + "</td>"
+                         
+              +"<td>" + v.rtdir + "</td>"
+              + "<td>" + v.stpid +"</td>"
+
+                        
+              +"<td>" + v.prdctdn + " min"  + "</td>"
+              +"</tr>"
+                  );
+                  
+                  $("#western").append("</table>");
+                  
+                  
+                  
+                
+              });
+
+            });
+      
+        });
+        
+    </script>
+    
+    </body>
+    
+</html>

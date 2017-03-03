@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Lane BusTracker </title>
+        <style>
+                
+            table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width:100%;
+}
+
+table, td, th {
+    
+    
+    border: 1px solid #ddd;
+    padding: 1px;
+    
+    
+}
+
+
+
+ 
+
+ tr:hover {background-color: grey;}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+table {
+    table-layout: fixed;
+}
+  
+        </style>
+        
+        
+        
+    </head>
+ 
+    
+    
+    <body>
+        
+        <div id= "addison"></div>
+   
+  
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script>
+    /* global $ */
+    
+    $(function() {
+         
+          var apiPassThruUrl = "https://polar-garden-75406.herokuapp.com/apiPassThru.php";
+          
+          var apiEndpoint = "http://ctabustracker.com/bustime/api/v2/getpredictions";
+          
+          
+          $.ajax({
+              url: apiPassThruUrl,
+              dataType: "json",
+              method: 'GET',
+              data: {"apiEndpoint": apiEndpoint,
+                      "key":"Dva4qBcNWpD3UjgLQWauLu7Ng",
+                      "format" : "json",
+                      "rt" : 152,
+                      "stpid" : 12569,
+            
+                      
+                  
+              }
+            }).done (function (data) {
+              console.log(data);
+              $("#addison").append("<h1>Bus Routes</h1>" + "<table>");
+            
+              $.each(data["bustime-response"]["prd"], function(i,v) {
+                  $("#addison").append("<tr>" 
+                  +"<td>" + v.rt + "</td>"
+                         
+              +"<td>" + v.rtdir + "</td>"
+                        
+              +"<td>" + v.prdctdn + " min"  + "</td>"
+              +"</tr>"
+                  );
+                  
+                  $("#addison").append("</table>");
+                  
+                  
+                  
+                
+              });
+
+            });
+      
+        });
+        
+    </script>
+    
+    </body>
+    
+</html>

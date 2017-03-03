@@ -1,26 +1,27 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html data-cloud9-id='1' lang="en">
 
-<head>
+<head data-cloud9-id='2'>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta data-cloud9-id='5' charset="utf-8">
+    <meta data-cloud9-id='6' http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta data-cloud9-id='7' name="viewport" content="width=device-width, initial-scale=1">
+    <meta data-cloud9-id='8' name="description" content="">
+    <meta data-cloud9-id='9' name="author" content="">
 
-    <title> Chicago Crime Data</title>
+    <title data-cloud9-id='10'> Chicago Crime Data</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link data-cloud9-id='11' href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link data-cloud9-id='12' href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link data-cloud9-id='13' href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link data-cloud9-id='14' href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- Theme CSS -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link data-cloud9-id='15' href="css/grayscale.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,35 +29,92 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+              <style data-cloud9-id='16'>
+             p3, h1 {font-family: times;}
+            p3 {font-size:20px;line-height:1.5em; margin-left: 24px; color: white;}
+            pre {font-size: 2em;}
+            button {color:black;}
+            label {color:black;}
+            label1 {color:white;}
+            div {color:white;}
+            select {color:black;}
+            th {font-weight: bold;}
+            div3 {
+
+                border-radius: 6px;
+                min-height:75px;
+                padding:15px;
+                color:white;}
+            
+            br { display: block;
+                margin: 10px 0; line-height:32px;}
+                
+            table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width:100%;
+}
+
+table, td, th {
+    
+    
+    border: 1px solid #ddd;
+    padding: 1px;
+    
+    
+}
+
+
+
+ 
+
+ tr:hover {background-color: grey;}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+table {
+    table-layout: fixed;
+}
+    
+    
+
+        </style>
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body data-cloud9-id='3' id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
+    <nav data-cloud9-id='17' class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div data-cloud9-id='18' class="container">
+            <div data-cloud9-id='19' class="navbar-header">
+                <button data-cloud9-id='20' type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i data-cloud9-id='21' class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                     <span class="light"></span> 
+                <a data-cloud9-id='22' class="navbar-brand page-scroll" href="#page-top">
+                     <span data-cloud9-id='23' class="light"></span> 
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+            <div data-cloud9-id='24' class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul data-cloud9-id='25' class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+                    <li data-cloud9-id='26' class="hidden">
+                        <a data-cloud9-id='27' href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#about">App</a>
+                    <li data-cloud9-id='28'>
+                        <a data-cloud9-id='29' class="page-scroll" href="#about">App</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Map</a>
+                    <li data-cloud9-id='30'>
+                        <a data-cloud9-id='31' class="page-scroll" href="#contact">Map</a>
                     </li>
                 </ul>
             </div>
@@ -66,16 +124,16 @@
     </nav>
 
     <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Chicago Crime Data</h1>
-                        <p class="intro-text">An App to easily maneuver through the Chicago Crime Data Set
-                            <br><br>Created by<br> Carl Hilario and Ariana Bazan </p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
+    <header data-cloud9-id='32' class="intro">
+        <div data-cloud9-id='33' class="intro-body">
+            <div data-cloud9-id='34' class="container">
+                <div data-cloud9-id='35' class="row">
+                    <div data-cloud9-id='36' class="col-md-8 col-md-offset-2">
+                        <h1 data-cloud9-id='37' class="brand-heading">Chicago Crime Data</h1>
+                        <p data-cloud9-id='38' class="intro-text">An App to easily maneuver through the Chicago Crime Data Set
+                            <br data-cloud9-id='39'><br data-cloud9-id='40'>Created by<br data-cloud9-id='41'> Carl Hilario and Ariana Bazan </p>
+                        <a data-cloud9-id='42' href="#about" class="btn btn-circle page-scroll">
+                            <i data-cloud9-id='43' class="fa fa-angle-double-down animated"></i>
                         </a>
                     </div>
                 </div>
@@ -84,105 +142,144 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Chicago Crime Data Searchtool</h2>
-                 <style>
-            p3, h1 {font-family: times;}
-            p3 {font-size:1.5em;line-height:1.5em; margin-left: 24px; color: white;}
-            pre {font-size: 2em;}
-            
-            div3 {
-            
-                 
-                border-radius: 6px;
-                min-height:75px;
-                padding:15px;
-                color:black;
-            }
-        </style>
-    
-</head>
-       
-       
-       <!-- div for instructions and form -->
-    <div3 id="form">
-        <p3>
-            Enter the year and crime class in the search bar to find a particular crime. 
-            <br>
-        </p3>
-        <input id="year" type="text" placeholder="Enter year"></input>
-        <button type="button" id="btnSearch" >Search</button>
-    </div3>
-    
+    <section data-cloud9-id='44' id="about" class="container content-section text-center">
+        <div data-cloud9-id='45' class="row">
+            <div data-cloud9-id='46' class="col-lg-8 col-lg-offset-2">
+                <h2 data-cloud9-id='47'>Chicago Crime Data Searchtool</h2>
+                
+  <!-- div for instructions and form -->
+      <div data-cloud9-id='48' class="form">
+        <p3 data-cloud9-id='49' align = "left">Make selections to filter the results.<br data-cloud9-id='50'>
+        
+        <label1 data-cloud9-id='51' for="year">Year of the crime</label>
+        <select data-cloud9-id='52' id="year" type = "text">
+          <option data-cloud9-id='53' value="2009">2009</option>
+          <option data-cloud9-id='54' value="2010">2010</option>
+          <option data-cloud9-id='55' value="2011">2011</option>
+          <option data-cloud9-id='56' value="2012">2012</option>
+          <option data-cloud9-id='57' value="2013">2013</option>
+          <option data-cloud9-id='58' value="2014">2014</option>
+          <option data-cloud9-id='59' value="2015">2015</option>
+          <option data-cloud9-id='60' value="2016">2016</option>
+          <option data-cloud9-id='61' value="2017">2017</option>
+        </select><br data-cloud9-id='62'>
+         
+        <label1 data-cloud9-id='63' for="primary_type">Primary Crime Type</label>
+        <select data-cloud9-id='64' id="primaryType" type="text">
+          <option data-cloud9-id='65' value="ARSON">Arson</option>
+          <option data-cloud9-id='66' value="ASSAULT">Assault</option>
+          <option data-cloud9-id='67' value="BATTERY">Battery</option>
+          <option data-cloud9-id='68' value="BURGLARY">Burglary</option>
+          <option data-cloud9-id='69' value="CONCEALED CARRY LICENSE VIOLATION">Concealed Carry License Violation</option>
+          <option data-cloud9-id='70' value="CRIMINAL DAMAGE">Criminal Damage</option>
+          <option data-cloud9-id='71' value="CRIMINAL TRESSPASS">Tresspass</option>
+          <option data-cloud9-id='72' value="CRIM SEXUAL ASSAULT">Assault</option>
+          <option data-cloud9-id='73' value="DECEPTIVE PRACTICE">Deceptive Practice</option>
+          <option data-cloud9-id='74' value="DOMESTIC VIOLENCE">Domestic Violence</option>
+          <option data-cloud9-id='75' value="GAMBLING">Gambling</option>
+          <option data-cloud9-id='76' value="HOMICIDE">Homicide</option>
+          <option data-cloud9-id='77' value="HUMAN TRAFFICKING">Human Trafficking</option>
+          <option data-cloud9-id='78' value="INTERFERENCE WITH PUBLIC OFFICER">INTRFRNC w Public Officer</option>
+          <option data-cloud9-id='79' value="INTIMIDATION">Intimidation</option>
+          <option data-cloud9-id='80' value="KIDNAPPING">Kidnapping</option>
+          <option data-cloud9-id='81' value="LIQUOR LAW VIOLATION">Liquor Law Violation</option>
+          <option data-cloud9-id='82' value="MOTOR VEHICLE THEF">Motor Vehicle Theft</option>
+          <option data-cloud9-id='83' value="NARCOTICS">Narcotics</option>
+          <option data-cloud9-id='84' value="NON-CRIMINAL">Non-Criminal</option>
+          <option data-cloud9-id='85' value="OBSCENITY">Obscenity</option>
+          <option data-cloud9-id='86' value="OFFENSE INVOLVING CHILDREN">Offense involving Children</option>
+          <option data-cloud9-id='87' value="OTHER OFFENSE">Other Offense</option>
+          <option data-cloud9-id='88' value="OTHER NARCOTIC VIOLATION">Other Narcotic Violation</option>
+          <option data-cloud9-id='89' value="PROSTITUTION">Prostitution</option>
+          <option data-cloud9-id='90' value="PUBLIC INDECENCY">Pub Indecency</option>
+          <option data-cloud9-id='91' value="PUBLIC PEACE VIOLATION">Pub Peace Violation</option>
+          <option data-cloud9-id='92' value="RITUALISM">Ritualism</option>
+          <option data-cloud9-id='93' value="ROBBERY">Robbery</option>
+          <option data-cloud9-id='94' value="SEX OFFENSE">Sex Offense</option>
+          <option data-cloud9-id='95' value="STALKING">Stalking</option>
+          <option data-cloud9-id='96' value="THEFT">Theft</option>
+          <option data-cloud9-id='97' value="WEAPONS VIOLATION">Weapons Violation</option>
+        </select><br data-cloud9-id='98'>
+        <br data-cloud9-id='99'>	
+        <button data-cloud9-id='100' id="searchUrl">Find crime</button>
+      	</div>
+      	
        <!-- a div to store the results -->
-    <div id="results" style="width: 100%; margin: 0 auto; text-align: left">
-        <p3> This is an app to check the crimes that have occured in the last 16 years in Chicago </p3>
-        <br>
-        <p3> To use it, simply enter a year into the search bar and click Search </p3>
-        <br>
-        <p3> Below in the Map section is the Chicago Data portal map for crimes in a certain region. </p3>
+    <div3 data-cloud9-id='101' id="results" style="overflow-y:auto;">
+        <p3 data-cloud9-id='102'> This is an app to check the crimes that have occured in the last 16 years in Chicago
+        <br data-cloud9-id='103'>
+         To use it, simply enter a year into the search bar and click search
+        <br data-cloud9-id='104'>
+         Thank you and have a good day!
+        <br data-cloud9-id='105'>
+         P.S. When clicking on the link to the location, some links won't work as they might not have locations listed.</p3>
+        <br data-cloud9-id='106'><br data-cloud9-id='107'>
+
         
-        
-    </div>
-    <body>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
+    </div3 >
+  
+    
+ <script data-cloud9-id='108' src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script data-cloud9-id='109'>
     /*global $*/
 
     
     $(function() {
-        
-        
-        
-        var baseUrl = 'https://data.cityofchicago.org/resource/6zsd-86xi.json';
-        var filters = "?year=";
-        var url = baseUrl + filters ;
     
-        
-        console.log(url)
-        
-            $("#btnSearch").on("click", function(){
-                
-                $("#results").html("")
-        
-                var searchTerm = $("#year").val();
-                var yearNum = searchTerm;        
-                        
-                
-                var searchUrl =  url + searchTerm;
-                    
-                    
-            $.getJSON(searchUrl)
+        var baseUrl = 'https://data.cityofchicago.org/resource/6zsd-86xi.json';
+        var filter = "?primary_type=";
+        var filterYear =  "&year=";
+        var searchUrl = baseUrl + filter;
+            
+            $("#searchUrl").on("click", function(){
+            //clear info before loading data
+             $("#results").html(""+"</table>");
+      var searchTerm = $("#primaryType").val();
+      var search = $("#year").val();
+      
+      var url = searchUrl + searchTerm;
+      var urlYear = url +filterYear;
+     
+      
+            $.getJSON(urlYear + search)
                 .done(function (data) {
+                    
+                    $("#results").append("Number of record returned:"+ data.length+"<br><hr>"); 
+                    
+                    var tbSet = "<table><tr><th>Crime Type</th>"+"<th>Block Name</th>"+"<th>ID Number</th>"+"<th>Case Number</th>"+"<th>Year</th>"+"<th>Description</th>"+"<th>Location</th>"+
+                    "<tr></tr><br>";
+                    
+                    
+                    $("#results").append(tbSet);
                 
-                        $.each(data, function (index,value){
+                 $.each(data, function (index,value){
+                               
+                var html = "<tr><td>"+ value.primary_type + "</td>"
                             
-                            var html = "<h2>"
-                            + "Block Name:"
-                            + value.block
-                            + "<br>"
-                            + "Id Number:"
-                            + value.id
-                            + "<br>"
-                            + "Case Number:"
-                            + value.case_number
-                            + "<br>"
-                            + "Date:"
-                            + value.date
-                            + "<br>"
-                            +"Description of crime:"
-                            + value.description
-                            + "<br>"
-                            + "Location Description of Crime:"
-                            + value.location_description
+                
+                            
+                            
+                +"<td>" + value.block + "</td>"
+                           
+                +"<td>" + value.id + "</td>"
+           
+                +"<td>" + value.case_number + "</td>"
+                            
+                +"<td>" + value.year + "</td>"
+                           
+                + "<td>" + value.description + "</td>"
+                           
+                + "<td>" + value.location_description + "</td>"
+                            
+                + "<td>" + '<a href="https://www.google.com/maps/place/' + value.latitude + "," + value.longitude + 'target="blank">Click here to see where the crime occured!</a>' + "</td>"
+                + "</tr>"
+                           
                             + "</h2>";
                         
                 
                             
-                            $("#results").append(html);
-        
+                            $("#results").append(html, "</table>");
+                                  
                         })
                     })
             });
@@ -191,7 +288,6 @@
                 
     });
         </script>
-                 
             </div>
         </div>
     </section>
@@ -199,18 +295,19 @@
 
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2></h2>
-                <p></p>
-                <p><a href="mailto:anbazan@cps.edu">anbazan@cps.edu</a>
+    <section data-cloud9-id='110' id="contact" class="container content-section text-center">
+        <div data-cloud9-id='111' class="row">
+            <div data-cloud9-id='112' class="col-lg-8 col-lg-offset-2">
+                <h2 data-cloud9-id='113'></h2>
+                <p data-cloud9-id='114'></p>
+                <p data-cloud9-id='115'><a data-cloud9-id='116' href="https://github.com/anbazan">anbazan@cps.edu</a>
                 </p>
-                <ul class="list-inline banner-social-buttons">
+                <ul data-cloud9-id='117' class="list-inline banner-social-buttons">
                   
-                    <li>
+                <li>
                         <a href="https://github.com/anbazan" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
+                    
                     
                 </ul>
             </div>
@@ -218,32 +315,33 @@
     </section>
 
     <!-- Map Section -->
-   <section>
-       <div align = "center"><p style="margin-bottom:3px"><a href="https://data.cityofchicago.org/Public-Safety/Crimes-Map/dfnk-7re6" target="_blank" style="font-size:12px;font-weight:bold;text-decoration:none;color:#333333;font-family:arial;">Crimes - Map</a></p><iframe width="950px" title="Crimes - Map" height="808px" src="https://data.cityofchicago.org/w/dfnk-7re6/3q3f-6823?cur=x9vtKKk3-BT&from=root" frameborder="0"scrolling="no"><a href="https://data.cityofchicago.org/Public-Safety/Crimes-Map/dfnk-7re6" title="Crimes - Map" target="_blank">Crimes - Map</a></iframe><p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p></div>
+   <section data-cloud9-id='122'>
+       
        
    </section>
    
     <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Your Website 2016</p>
+    <footer data-cloud9-id='123'>
+        <div data-cloud9-id='124' class="container text-center">
+            <p data-cloud9-id='125'>Copyright &copy; Your Website 2016</p>
         </div>
     </footer>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
+    <script data-cloud9-id='126' src="vendor/jquery/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script data-cloud9-id='127' src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script data-cloud9-id='128' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     
-
+    
     <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
+    <script data-cloud9-id='129' src="js/grayscale.min.js"></script>
 
 </body>
 
 </html>
+<script src="/_static/preview/livecss.js"></script>
