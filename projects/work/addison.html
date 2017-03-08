@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <title> Lane BusTracker </title>
-      <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="manifest" href="./manifest.json">
 
     </head>
  
@@ -17,7 +17,7 @@
   <li><a href="western.html">Western</a></li>
  </ul>
         
-        <div id= "western" style="padding:20px;background-color:light-grey;height:1500px;"></div>
+        <div id= "addison" style="padding:20px;background-color:light-grey;height:1500px;"></div>
    
   
     
@@ -42,28 +42,27 @@
               data: {"apiEndpoint": apiEndpoint,
                       "key":"Dva4qBcNWpD3UjgLQWauLu7Ng",
                       "format" : "json",
-                      "rt" : "49,X49",
-                      "stpid" : "8417,8195",
+                      "rt" : 152,
+                      "stpid" : 12569,
             
                       
                   
               }
             }).done (function (data) {
               console.log(data);
-              $("#western").append("<h1> Western Bus Routes</h1>" + "<table>");
+              $("#addison").append("<h1> Addison Bus Routes</h1>" + "<table>");
             
               $.each(data["bustime-response"]["prd"], function(i,v) {
-                  $("#western").append("<tr>" 
+                  $("#addison").append("<tr>" 
                   +"<td>" + v.rt + "</td>"
                          
               +"<td>" + v.rtdir + "</td>"
               + "<td>" + v.stpid +"</td>"
-                        
               +"<td>" + v.prdctdn + " min"  + "</td>"
-              +"</tr>"
+              
                   );
                   
-                  $("#western").append("</table>");
+                  $("#addison").append("</table>");
                   
                   
                   
@@ -77,4 +76,4 @@
     
     </body>
     
-</html> 
+</html>
